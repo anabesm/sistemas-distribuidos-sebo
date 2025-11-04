@@ -2,7 +2,7 @@ from typing import Any, Dict, List
 import io
 import struct
 
-class PojoEscolhidoInputStream(io.BufferedIOBase):
+class LivroInputStream(io.BufferedIOBase):
     def __init__(self, origem: Any, close_origem: bool = False) -> None:
         super().__init__()
         self._src = origem
