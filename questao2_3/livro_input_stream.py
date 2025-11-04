@@ -9,7 +9,6 @@ class LivroInputStream(io.BufferedIOBase):
         self._close = close_origem
 
     def _read_exact(self, n: int) -> bytes:
-        """Lê exatamente n bytes ou lança EOFError."""
         data = b""
         while len(data) < n:
             chunk = self._src.read(n - len(data))
